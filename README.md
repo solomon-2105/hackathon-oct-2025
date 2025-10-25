@@ -11,7 +11,7 @@ Traditional testing platforms evaluate right or wrong answers but fail to unders
 Our project solves this by building an **AI-driven personalized learning ecosystem** that adapts to every learner. After each test, the system:
 
 1. **Identifies weak concepts** using AI-driven performance analysis.  
-2. **Explains misunderstood topics** using LLM-generated summaries and examples.  
+2. **Explains misunderstood topics** using Gemini LLM-generated summaries and examples.  
 3. **Recommends AI-selected video content** to visually reinforce difficult concepts.  
 4. **Provides practice questions** and topic-specific quizzes for targeted improvement.  
 5. **Generates personalized assignments** based on performance data and related concepts.  
@@ -57,11 +57,11 @@ Here’s how our system stands apart:
 We don’t just mark right or wrong — we identify *which concept* a student misunderstood (e.g., “retardation” in Physics).
 
 ✅ **Dynamic AI-Generated Assessments**  
-Instead of showing the same test again, our AI uses GPT-4 to **generate new questions** focusing on the student’s weak topics.
+Instead of showing the same test again, our AI uses Gemini LLM to **generate new questions** focusing on the student’s weak topics.
 
 ✅ **Personalized Learning Flow**  
 After every test, the system:
-- Explains wrong concepts in simple AI-generated explanations.  
+- Explains wrong concepts in simple Gemini-generated explanations.  
 - Recommends **targeted video lessons** using topic mapping.  
 - Provides **practice question links** for reinforcement.  
 - Generates **custom assignments** mixing weak and related topics.  
@@ -77,14 +77,50 @@ The system visualizes student progress using **analytics and performance graphs*
 
 ---
 
+## 🎯 Objectives
+- Bridge the gap between **testing and learning** through AI-driven feedback.
+- Create a **continuous learning loop** where mistakes fuel improvement.
+- Demonstrate **explainable AI** and **personalization** for scalable education.
+- Deliver a **responsive, accessible, and production-ready** prototype.
+
+---
 
 ## 🔄 Process Pipeline
 
 1. **Test Taking:** Student completes a test.  
 2. **Answer Analysis:** Backend AI identifies wrong answers and maps them to concepts.  
-3. **Concept Explanation:** GPT generates detailed explanations and mini summaries.  
+3. **Concept Explanation:** Gemini LLM generates detailed explanations and mini summaries.  
 4. **Video Recommendations:** AI suggests learning videos for weak concepts.  
 5. **Practice Stage:** System generates follow-up MCQs and exercises.  
-6. **Assignment Generation:** Custom assignments built using GPT and concept tags.  
+6. **Assignment Generation:** Custom assignments built using Gemini and concept tags.  
 7. **Efficiency Dashboard:** Visual progress graphs showing improvement trends.  
 
+---
+
+## ⚙️ Tech Stack & Tools
+
+| Layer | Tools / Libraries | Purpose |
+|-------|-------------------|----------|
+| **Frontend** | Next.js + TypeScript + Tailwind CSS + Framer Motion | Modern responsive UI with animations |
+| **Backend** | Next.js API Routes / FastAPI | Handles AI requests & responses |
+| **Database** | Firebase Firestore | Stores user progress, analytics |
+| **Auth** | Firebase Authentication | Secure login (Google + Email) |
+| **AI / LLM** | Gemini LLM + LangChain + ChromaDB | Concept analysis, RAG retrieval, question generation |
+| **APIs** | YouTube Data API + Gemini API | Video recommendations, content generation |
+| **Visualization** | Recharts / Chart.js | Performance and efficiency graphs |
+| **Accessibility** | React Aria / WCAG audit tools | Ensures inclusive design |
+| **Analytics** | Google Analytics 4 / Firebase Analytics | Track engagement & progress |
+
+---
+
+## 🧠 How AI Works (LLM + RAG + Embeddings)
+
+1. **Concept Identification** — Gemini LLM analyzes each question/answer pair.  
+2. **Context Retrieval (RAG)** — Top related definitions fetched using embeddings (`text-embedding-3-small`) from a local concept corpus.  
+3. **LLM Response Generation** — Gemini uses these sources to explain the concept + generate new practice questions in structured JSON.  
+4. **Feedback Loop** — AI confidence score determines difficulty of next quiz.  
+5. **Guardrails** — If confidence < 0.6, fallback to standard concept explanations.
+
+---
+
+## 🧱 System Architecture
