@@ -42,7 +42,7 @@ A web application that uses AI to provide a personalized learning experience for
 
 ## ⚙️System Architecture
 
-![Alt text](C:\brr\hackathon-oct-2025)
+![Alt text](image.jpeg)
 
 ## 🛠️ Tech Stack
 
