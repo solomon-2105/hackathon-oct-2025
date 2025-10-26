@@ -45,8 +45,6 @@ A web application that uses AI to provide a personalized learning experience for
 ![App Screenshot](./image.jpeg)
 
 
-## 🛠️ Tech Stack
-
 ##  Setup Instructions
 
 1.  **Clone the Repository:**
