@@ -40,7 +40,13 @@ A web application that uses AI to provide a personalized learning experience for
     * Google Gemini API (for notes, tests, analysis)
     * Google YouTube Data API v3 (for video search)
 
-## ⚙️ Setup Instructions
+## ⚙️System Architecture
+
+![Alt text](C:\brr\hackathon-oct-2025)
+
+## 🛠️ Tech Stack
+
+##  Setup Instructions
 
 1.  **Clone the Repository:**
     ```bash
