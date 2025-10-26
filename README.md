@@ -42,7 +42,8 @@ A web application that uses AI to provide a personalized learning experience for
 
 ## ⚙️System Architecture
 
-![Alt text](image.jpeg)
+![App Screenshot](./image.jpeg)
+
 
 ## 🛠️ Tech Stack
 
