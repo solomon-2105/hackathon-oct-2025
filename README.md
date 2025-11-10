@@ -1,4 +1,4 @@
-# NeuroLearn: AI-Powered Personalized Learning Platform
+# Recurra: AI-Powered Personalized Learning Platform
 
 A web application that uses AI to provide a personalized learning experience for students, helping them identify and improve on weak concepts.
 
